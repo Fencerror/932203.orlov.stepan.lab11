@@ -1,0 +1,39 @@
+﻿@model MathServiceApp.Models.RandomNumbersViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Model Calc</title>
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <header>Backend1</header>
+        <a href="/">Home</a>
+    </nav>
+    <main>
+        <h1>AccessServiceDirectly</h1>
+        <div>
+            <h4>Rand Value First: @Model.Num1</h4>
+            <h4>Rand Value Second: @Model.Num2</h4>
+
+            <h4>Add:</h4>
+            <p>@Model.Num1 + @Model.Num2 = @(Model.Num1 + Model.Num2)</p>
+            <h4>Sub:</h4> 
+            <p>@Model.Num1 - @Model.Num2 = @(Model.Num1 - Model.Num2)</p>
+            <h4>Mult:</h4>
+            <p> @Model.Num1 * @Model.Num2 = @(Model.Num1 * Model.Num2)</p>
+            <h4>Div:</h4>
+            <p> @Model.Num1 / @Model.Num2 = @(Model.Num2 != 0 ? ((double)Model.Num1 / Model.Num2).ToString("0.##") : "Error (div by 0)")</p>
+
+        </div>
+    </main>
+    <footer>©2024 - Backend1</footer>
+
+
+
+</body>
+</html>

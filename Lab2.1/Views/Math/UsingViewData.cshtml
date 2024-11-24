@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Model Calc</title>
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <header>Backend1</header>
+        <a href="/">Home</a>
+    </nav>
+    <main>
+        <h1>PassUsingViewData</h1>
+        <div>
+            <h4>Rand Value First: @ViewData["Num1"]</h4>
+            <h4>Rand Value Second: @ViewData["Num2"]</h4>
+            <h4>Add:</h4>
+            <p> @ViewData["Num1"] + @ViewData["Num2"] = @((int)ViewData["Num1"] + (int)ViewData["Num2"])</p>
+            <h4>Sub:</h4> 
+            <p>@ViewData["Num1"] - @ViewData["Num2"] = @((int)ViewData["Num1"] - (int)ViewData["Num2"])</p>
+            <h4>Mult: </h4>
+            <p> @ViewData["Num1"] * @ViewData["Num2"] = @((int)ViewData["Num1"] * (int)ViewData["Num2"])</p>
+            <h4>Div: </h4>
+            <p>@ViewData["Num1"] / @ViewData["Num2"] = @(((int)ViewData["Num2"] != 0) ? ((double)(int)ViewData["Num1"] / (int)ViewData["Num2"]).ToString("0.##") : "Error (div by 0)")</p>
+        </div>
+    </main>
+    <footer>©2024 - Backend1</footer>
+
+</body>
+</html>
